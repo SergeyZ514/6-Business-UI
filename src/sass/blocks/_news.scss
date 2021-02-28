@@ -1,0 +1,119 @@
+.news {
+   padding-top: 100px;
+   &__header {
+      margin-bottom: 40px;
+   }
+}
+
+.header-news {
+   display: flex;
+   justify-content: space-between;
+
+   &__nav {
+      padding-top: 22px;
+   }
+}
+
+.news-nav {
+   cursor: pointer;
+   display: flex;
+   width: 370px;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   &__item {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #d3cfce;
+      &.active {
+         color: $main_color;
+         &:hover {
+            color: $main_color;
+            cursor: default;
+         }
+      }
+      &:hover {
+         color: darken($color: #d3cfce, $amount: 10%);
+      }
+   }
+}
+
+.news-tabs {
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin: 0 -15px;
+}
+
+.news-item {
+   display: none;
+   flex: 0 0 calc(100% / 3);
+   padding: 0 15px;
+   margin-bottom: 30px;
+   &.active {
+      display: block;
+   }
+
+   &__content {
+      margin-bottom: 33px;
+      height: 370px;
+   }
+   &__image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+
+   &__category {
+      position: absolute;
+      top: 24px;
+      left: 30px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.75px;
+      text-transform: uppercase;
+      color: #ffffff;
+      z-index: 5;
+   }
+
+   &__slogan {
+      position: absolute;
+      max-width: 310px;
+      left: 30px;
+      top: 229px;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffffff;
+      z-index: 5;
+   }
+
+   &__descr {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 32px;
+      color: #646667;
+      margin-bottom: 32px;
+   }
+
+   &__link {
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $main_color;
+      &:hover {
+         color: darken($color: $main_color, $amount: 10%);
+      }
+   }
+}

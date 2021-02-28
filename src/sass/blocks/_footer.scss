@@ -1,0 +1,42 @@
+.footer {
+   padding: 44px 0 41px 0;
+   &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__column {
+      flex: 0 0 50%;
+      &:last-child {
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+
+   &__copyrigt {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 40px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #646667;
+   }
+
+   &__link {
+      display: block;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 40px;
+      text-align: right;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #646667;
+      &:first-child {
+         margin-right: 27px;
+      }
+      &:hover {
+         color: darken($color: #646667, $amount: 10%);
+      }
+   }
+}

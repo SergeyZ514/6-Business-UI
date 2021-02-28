@@ -1,0 +1,43 @@
+.ibg {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.ibg img {
+   width: 0;
+   height: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.mask {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: '';
+      position: absolute;
+      left: -41%;
+      top: -40%;
+      width: 70%;
+      height: 150%;
+      background: linear-gradient(
+         198.43deg,
+         #007397 4.17%,
+         rgba(0, 115, 151, 0.0001) 87.5%
+      );
+      transform: rotate(19deg);
+      z-index: 1;
+   }
+   &_s {
+      &::after {
+         left: -20%;
+         top: -25%;
+         width: 100%;
+      }
+   }
+}
